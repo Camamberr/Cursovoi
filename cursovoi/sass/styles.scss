@@ -1,0 +1,1185 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ol,
+ul,
+li,
+footer,
+header,
+main,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+:focus {
+  outline: 0;
+}
+
+footer,
+header,
+nav,
+main,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'Gabriela';
+  src: url('../fonts/Gabriela-Regular.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('../fonts/Lora-Regular.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+$white: #ffffff;
+$black: #000000;
+$light_brown: #F0DBC5;
+$hight_gradient: #F4E5D5;
+$text_brown: #5D370E;
+$collection_footer_background_brown: #574A44;
+$button_brown: #CCAD7C;
+$collection_title: #684444;
+
+@keyframes fade-in {
+  from {
+    translate: 10vw;
+    opacity: 0;
+  }
+}
+
+@keyframes rotateY-A {
+  from {
+    translate: -50vw;
+    transform: rotateY(360deg);
+    opacity: 0;
+  }
+
+  80% {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@mixin Lora-twenty-five {
+  font-family: 'Lora';
+  font-size: 25px;
+}
+
+@mixin Gabriela-sorok {
+  font-family: 'Gabriela';
+  font-size: 40px;
+}
+
+@mixin Gabriela-footer-header {
+  font-family: 'Gabriela', Gabriela;
+  font-size: 20px;
+}
+
+@mixin space-space {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin gradient-back {
+  background: linear-gradient($hight_gradient, $light_brown);
+}
+
+body {
+  font-style: normal;
+  line-height: 1;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+/*---------------------------------HEADER START------------------------------------------*/
+header {
+  width: 101%;
+
+  .all-header {
+    @include space-space;
+    flex-direction: column;
+    column-gap: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+
+  }
+
+  .header-menu {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .close-menu {
+      display: none;
+    }
+  }
+
+  .header-menu-list {
+    list-style-type: none;
+    @include Gabriela-footer-header;
+    color: $black;
+    justify-content: space-between;
+    display: flex;
+    column-gap: 127px;
+    flex-wrap: wrap;
+
+    .header-menu-link {
+      padding: 25px 0px;
+      text-decoration: none;
+      line-height: 120%;
+
+      &:link,
+      &:visited {
+        color: $black;
+      }
+      &:hover {
+        color: $button_brown;
+      }
+    }
+  }
+}
+
+.up-header {
+  color: $text_brown;
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  border-bottom: 5px solid $light_brown;
+
+  .header-museum {
+    margin-left: 2%;
+    font-family: 'Lora';
+    display: flex;
+
+    .header-logo {
+      padding-top: 11px;
+    }
+
+    .Museum-name {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      line-height: 1.2;
+      margin-left: 10px;
+
+      .Museum-art {
+        flex-wrap: nowrap;
+        font-size: 32px;
+      }
+
+      .Alphonce {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .header-action {
+    margin-right: 6%;
+    margin-top: 16px;
+    @include Gabriela-footer-header;
+    height: 62px;
+    display: flex;
+
+    .github-present {
+      margin-top: 15px;
+      align-items: center;
+      height: 62px;
+    }
+
+    .gitHub {
+      margin-right: 2px;
+      margin-left: 12px;
+    }
+  }
+}
+
+.burger-menu {
+  display: none;
+  color: $collection_title;
+  width: 33px;
+  height: 26px;
+}
+
+path {
+  fill: $text_brown;
+}
+
+/*---------------------------------HEADER END------------------------------------------*/
+/*---------------------------------BANNER START------------------------------------------*/
+.content {
+  width: 101%;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 532px;
+  background: url('../pictures/picture3.png') no-repeat center;
+  background-size: cover;
+  width: 101vw;
+
+  .banner-info {
+    color: $white;
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    line-height: 1.2;
+    font-family: 'Lora';
+    width: 90%;
+
+    .banner-title-big {
+      font-size: 5em;
+      margin-bottom: 0.2em;
+      line-height: 1.1;
+    }
+
+    .banner-title-little {
+      font-size: 2.2em;
+    }
+  }
+
+  .banner-button {
+    font-family: 'Gabriela';
+    font-size: 2.6em;
+    align-items: center;
+    width: auto;
+    max-width: 369px;
+    height: auto;
+    padding: 0.5em 1em;
+    color: $button_brown;
+    border: none;
+    text-decoration: none;
+    border-radius: 50px;
+    background-color: $white;
+    position: absolute;
+    left: 5%;
+    top: auto;
+    bottom: 10%;
+    transition: 0.5s;
+    white-space: nowrap;
+
+    &:hover {
+      background-color: $button_brown;
+      color: $white;
+      transform: scale(1.1);
+    }
+  }
+}
+
+/*---------------------------------BANNER END------------------------------------------*/
+/*---------------------------------EXPO START------------------------------------------*/
+.exposition {
+  @include gradient-back;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .exposition-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .exposition-item {
+      padding: 65px 65px;
+
+      .exposition-card-body {
+        transition-timing-function: ease-in-out;
+        opacity: 0;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+
+        .exposition-card-image {
+          transition: 1s;
+
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+
+        .exposition-text {
+          line-height: 25px;
+          color: $text_brown;
+
+          .exposition-card-title {
+            @include Gabriela-sorok;
+            line-height: 52px;
+            margin-bottom: 0px;
+          }
+
+          .exposition-card-date {
+            @include Lora-twenty-five;
+          }
+
+          .exposition-card-desription {
+            font-family: 'Lora';
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.exposition-card-body-animation {
+  opacity: 1;
+  animation-name: rotateY-A;
+}
+
+/*---------------------------------EXPO END------------------------------------------*/
+/*---------------------------------ABOUT MUSEUM START------------------------------------------*/
+.about-museum {
+  margin-top: 77px;
+  margin-bottom: 105px;
+  flex-direction: column;
+  @include space-space;
+
+  .about-body {
+    animation-name: fade-in;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    view-timeline-name: --fade-in-image;
+    animation-timeline: --fade-in-image;
+    animation-range: 10% 40%;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 15px;
+    flex-wrap: wrap;
+    column-gap: 88px;
+
+    .about-text {
+      @include Lora-twenty-five;
+      color: $text_brown;
+
+      .about-title {
+        text-align: center;
+        font-family: 'Gabriela';
+        font-size: 45px;
+        text-decoration: underline;
+        padding-bottom: 20px;
+      }
+
+      .about-description {
+        p {
+          padding-bottom: 30px;
+          line-height: 32px;
+        }
+      }
+    }
+  }
+}
+
+/*---------------------------------ABOUT MUSEUM END------------------------------------------*/
+/*---------------------------------СOLLECTION START------------------------------------------*/
+.content-collection .banner-collection {
+  position: relative;
+  min-height: 477px;
+  background: url('../pictures/alma_tadema01.png') no-repeat center;
+  background-size: cover;
+  width: 101vw;
+
+  .banner-info-collection {
+    color: $text_brown;
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    line-height: 1.2;
+    font-family: 'Gabriela';
+    width: 90%;
+
+    .banner-title-big-collection {
+      font-size: 5em;
+      margin-bottom: 0.2em;
+      line-height: 1.1;
+    }
+
+    .banner-title-little-collection {
+      font-size: 2.2em;
+    }
+  }
+}
+
+.gallery {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0px;
+  flex-wrap: wrap;
+
+  .artwork {
+    margin: 0 20px 20px 0;
+  }
+
+  img {
+    border-radius: 10px;
+    width: 470px;
+    transition: 1s;
+    margin: 0 20px 20px 0;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .description {
+    color: $text_brown;
+    @include Gabriela-footer-header;
+    line-height: 2em;
+
+    .title {
+      font-size: 30px;
+    }
+  }
+}
+
+/*---------------------------------СOLLECTION END------------------------------------------*/
+
+/*---------------------------------FORM START------------------------------------------*/
+.start-form {
+  padding: 10px 0px;
+}
+
+.login-box {
+  border: 4px solid $button_brown;
+  margin-left: 50vw;
+  margin-top: 50vh;
+  width: 50vw;
+  padding: 3%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50px;
+  z-index: 1;
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: $collection_title;
+  font-family: 'Gabriela';
+  font-size: 2em;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: $collection_title;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid $black;
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box label {
+  position: absolute;
+  top: -30%;
+  left: 0;
+  padding: 10px 0;
+  color: $collection_title;
+}
+
+.login-box form a {
+  @include Lora-twenty-five;
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: $white;
+  font-size: 17px;
+  text-decoration: none;
+  overflow: hidden;
+  margin-top: 30px;
+  background-color: $button_brown;
+  border-radius: 20px;
+  transition: 1s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup .popup-message {
+  @include Gabriela-footer-header;
+  background-color: $button_brown;
+  color: $white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 575px) {
+  .login-box {
+    margin-top: 44vh;
+    width: 70vw;
+  }
+
+  .login-box form a {
+    font-size: 15px;
+  }
+
+  .login-box h2 {
+    font-size: 1.5em;
+  }
+}
+/*---------------------------------FORM END------------------------------------------*/
+/*---------------------------------PRESENT START------------------------------------------*/
+.presentation {
+  background-color: $collection_footer_background_brown;
+  border-bottom: #F0DBC5 solid 3px;
+
+  .presentation-body {
+    .presentation-title {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      color: $white;
+      @include Gabriela-sorok;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .presentation-pictures {
+      display: flex;
+      justify-content: space-around;
+      padding: 15px 15px;
+      flex-wrap: wrap;
+
+      img {
+        border-radius: 10px;
+        width: 370px;
+        transition: 1s;
+        margin: 0 50px 50px 0;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+/*---------------------------------PRESENT END------------------------------------------*/
+/*---------------------------------FOOTER START------------------------------------------*/
+.footer {
+  background-color: $collection_footer_background_brown;
+  width: 101%;
+
+  .footer-body {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 15px;
+    flex-wrap: wrap;
+    padding-top: 15px;
+    padding-bottom: 30px;
+
+    .footer-column {
+      padding-bottom: 20px;
+
+      .footer-column-title {
+        color: $white;
+        line-height: 1.2em;
+        @include Gabriela-footer-header;
+      }
+
+      .footer-about {
+        font-family: 'Gabriela';
+        font-size: 15px;
+        color: $light_brown;
+        line-height: 15px;
+      }
+    }
+  }
+}
+
+.contacts {
+  font-family: 'Gabriela';
+  font-size: 15px;
+  color: $light_brown;
+  line-height: 15px;
+}
+
+/*---------------------------------FOOTER END------------------------------------------*/
+/*---------------------------------HISTORY START------------------------------------------*/
+.history {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.history-title {
+  @include Gabriela-sorok;
+  color: #5D370E;
+  padding-bottom: 20px;
+}
+
+.content-history .banner-history {
+  position: relative;
+  min-height: 477px;
+  background: url('../pictures/decorations.png') no-repeat center;
+  background-size: cover;
+  width: 101vw;
+
+  .banner-info-history {
+    color: $white;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    line-height: 1.2;
+    font-family: 'Lora';
+    width: 90%;
+
+    .banner-title-big-history {
+      font-size: 5em;
+      margin-bottom: 0.2em;
+      line-height: 1.1;
+    }
+
+    .banner-title-little-history {
+      font-size: 2.2em;
+    }
+  }
+}
+
+.robin {
+  border-bottom: 5px solid $light_brown;
+}
+
+.one-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 90px;
+}
+
+.robin-legend {
+  padding-bottom: 7%;
+  padding-left: 3%;
+  padding-right: 3%;
+  line-height: 1.2;
+  padding-top: 30px;
+  text-align: left;
+  font-family: 'Lora';
+  font-size: 22px;
+  max-width: 1200px;
+  color: #5D370E;
+}
+
+.robin-description {
+  padding-top: 20px;
+  max-width: 600px;
+  line-height: 1.2em;
+  color: #5D370E;
+  font-family: 'Lora';
+  font-size: 22px;
+  text-align: left;
+
+  p {
+    padding: 8px;
+  }
+}
+
+.robin-bird-container {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    transform: translateY(-50px);
+  }
+}
+
+.sky {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url('../pictures/sky.jpg');
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 10px rgba(193, 206, 213, 0.5);
+}
+
+.bird {
+  will-change: background-image;
+  position: absolute;
+  bottom: 10%;
+  left: 15%;
+  width: 250px;
+  height: 250px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  animation: gifAnimation 0.2s steps(1) infinite;
+  animation-play-state: paused !important;
+  transition: 1s;
+
+}
+
+.robin-bird-container:hover .bird {
+  opacity: 1;
+  animation-play-state: running !important;
+
+  transform: translateY(-200px);
+}
+
+.one-line-recovery {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 15px;
+  flex-wrap: wrap;
+}
+
+.recovery-description {
+  line-height: 1.2;
+  max-width: 500px;
+  text-align: left;
+  font-family: 'Lora';
+  font-size: 22px;
+  color: #5D370E;
+  padding-top: 80px;
+
+  p {
+    padding-bottom: 20px;
+  }
+}
+
+
+.recovery,
+.closing,
+.rest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.recovery {
+  padding-bottom: 5%;
+}
+
+.rest-description {
+  line-height: 1.2;
+  border-bottom: 5px solid $light_brown;
+  max-width: 1212px;
+  text-align: left;
+  font-family: 'Lora';
+  color: #5D370E;
+  font-size: 22px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-bottom: 3%;
+
+  p {
+    padding-bottom: 20px;
+  }
+}
+
+.one-line-recovery,
+.one-line-closing {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  column-gap: 60px;
+}
+
+.one-line-closing {
+  padding-bottom: 10%;
+}
+
+.recovery-description {
+  line-height: 1.2;
+  max-width: 500px;
+  text-align: left;
+  font-family: 'Lora';
+  font-size: 22px;
+  color: #5D370E;
+  padding-top: 80px;
+
+  p {
+    padding-bottom: 20px;
+  }
+}
+
+.closing-description {
+  line-height: 1.2;
+  max-width: 700px;
+  text-align: left;
+  font-family: 'Lora';
+  font-size: 22px;
+  color: #5D370E;
+  padding-top: 80px;
+
+  p {
+    padding-bottom: 20px;
+  }
+}
+
+.Elena-container {
+  background-color: $light_brown;
+  width: 360px;
+  border-radius: 40px;
+
+  .Elena-img {
+    padding-top: 10px;
+    transition: 1s;
+
+    &:hover {
+      scale: (1.1);
+    }
+  }
+
+  .Elena-title {
+    color: $text_brown;
+    font-size: 25px;
+    padding-top: 30px;
+    font-family: 'Gabriela';
+  }
+}
+
+.museum-closing {
+  max-width: 322px;
+}
+
+.closing-pictures {
+  margin-bottom: 3%;
+  border-bottom: 5px solid $light_brown;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 15px;
+  flex-wrap: wrap;
+
+  figcaption {
+    color: $collection_title;
+    font-size: 20px;
+    font-family: 'Gabriela';
+  }
+
+  .museum-closing-img {
+    transition: 1s;
+    padding-bottom: 15%;
+
+    &:hover {
+      scale: (1.1);
+    }
+  }
+}
+
+.banner-aesthetic {
+  width: 101vw;
+  height: 637px;
+  @include gradient-back;
+  position: relative;
+
+  .banner-aesthetic-info {
+    max-width: 8500px;
+    text-align: right;
+    color: $text_brown;
+    position: absolute;
+    top: 40%;
+    right: 27%;
+    line-height: 1.2;
+    font-family: 'Gabriela';
+
+    .banner-title-big-aesthetic {
+      font-size: 2em;
+      margin-bottom: 1.2em;
+      line-height: 1.1;
+    }
+
+    .banner-title-little-aesthetic {
+      font-size: 1.6em;
+    }
+  }
+}
+
+@keyframes gifAnimation {
+  0% {
+    background-image: url('../pictures/bird1.png');
+  }
+
+  50% {
+    background-image: url('../pictures/bird.png');
+  }
+
+  100% {
+    background-image: url('../pictures/bird.png');
+  }
+}
+
+/*---------------------------------HISTORY END------------------------------------------*/
+
+@media screen and (max-width: 700px) {
+  login-box {
+    margin-top: 40vh;
+    width: 65vw;
+  }
+  body {
+    min-width: auto;
+  }
+
+  /*header*/
+  .header-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 270px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding-top: 60px;
+
+    .close-menu {
+      display: block !important;
+    }
+  }
+
+  .header-menu.show {
+    display: block;
+    left: 0;
+  }
+
+  .close-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .header-menu-list {
+    padding-left: 20px;
+    gap: 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-menu-item {
+    margin-bottom: 10px;
+  }
+
+  .burger-menu {
+    cursor: pointer;
+  }
+
+  .Museum-name,
+  .github-present {
+    display: none;
+  }
+
+  .header {
+    flex-wrap: nowrap;
+    column-gap: 20px;
+  }
+
+  .header-menu {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+    order: -1;
+
+    svg {
+      padding-left: 1em;
+    }
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .up-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: none;
+    padding: 2px 0px 2px 0px;
+  }
+
+  .header-museum {
+    margin-left: 0;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .header-logo {
+    padding-top: 0;
+    width: 40px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .gitHub {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  /*banner*/
+  .content .banner {
+    .banner-info {
+      left: 10%;
+      top: 7%;
+
+      .banner-title-big {
+        font-size: 3.5em;
+      }
+
+      .banner-title-little {
+        font-size: 2em;
+      }
+    }
+
+    .banner-button {
+      left: 10%;
+      bottom: 18%;
+      padding: 0.4em 0.8em;
+      font-size: 2em;
+
+    }
+  }
+
+  .content-collection .banner-collection {
+    .banner-info-collection {
+      left: 10%;
+      top: 7%;
+
+      .banner-title-big-collection {
+        font-size: 2.8em;
+      }
+
+      .banner-title-little-collection {
+        font-size: 1.8em;
+      }
+    }
+  }
+
+  /*history*/
+  .content-history .banner-history .banner-body-history .banner-info-history {
+    .banner-title-big-history {
+      font-size: 2.8em;
+    }
+
+    .banner-title-little-history {
+      font-size: 1.8em;
+    }
+  }
+
+  .Elena-container {
+    width: 280px;
+
+    .Elena-title {
+      font-size: 20px;
+    }
+  }
+
+  .closing-description {
+    padding-left: 3%;
+  }
+
+  .history-title {
+    font-size: 2em;
+  }
+
+  .banner-aesthetic .banner-aesthetic-body .banner-aesthetic-info {
+    right: 18%;
+
+    .banner-title-big-aesthetic {
+      font-size: 1.7em;
+    }
+
+    .banner-title-little-aesthetic {
+      font-size: 1.2em;
+    }
+  }
+
+  .footer-body {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+}

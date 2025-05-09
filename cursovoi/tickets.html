@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Билеты</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="pictures/logo.svg">
+</head>
+
+<body>
+    <header class="header">
+        <div class="all-header">
+            <div class="up-header">
+                <div class="header-museum">
+                    <a class="header-logo" href="home.html">
+                        <svg width="52" height="69" viewBox="0 0 509 672" fill="none" class="header-logo-image">
+                            <image xlink:href="pictures/logo.svg" />
+                        </svg>
+                    </a>
+                    <div class="Museum-name">
+                        <p class="Museum-art">Художественный музей</p>
+                        <p class="Alphonce">имени Альфонса Мухи</p>
+                    </div>
+                </div>
+                <div class="burger-menu" id="burger-menu">
+                    <svg width="33" height="26" viewBox="0 0 33 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M30.25 20.8C31.7687 20.8 33 21.9641 33 23.4C33 24.8358 31.7687 26 30.25 26C29.4236 26 3.57638 26 2.75 26C1.23131 26 0 24.8358 0 23.4C0 21.9641 1.23131 20.8 2.75 20.8C3.57638 20.8 29.4236 20.8 30.25 20.8ZM30.25 10.4C31.7687 10.4 33 11.5641 33 13C33 14.4358 31.7687 15.6 30.25 15.6C29.4236 15.6 3.57638 15.6 2.75 15.6C1.23131 15.6 0 14.4358 0 13C0 11.5641 1.23131 10.4 2.75 10.4C3.57638 10.4 29.4236 10.4 30.25 10.4ZM30.25 0C31.7687 0 33 1.16415 33 2.6C33 4.03585 31.7687 5.2 30.25 5.2C29.4236 5.2 3.57638 5.2 2.75 5.2C1.23131 5.2 0 4.03585 0 2.6C0 1.16415 1.23131 0 2.75 0C3.57638 0 29.4236 0 30.25 0Z" />
+                    </svg>
+                </div>
+                <div class="header-action">
+                    <p class="github-present">Мы в gitHub</p>
+                    <a class="gitHub" href="https://github.com/Camamberr">
+                        <svg width="61" height="62" viewBox="0 0 62 62" fill="none" class="header-git-image">
+                            <image xlink:href="pictures/git.svg" />
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+            <nav class="header-menu">
+                <button class="close-menu">✖</button>
+                <ul class="header-menu-list">
+                    <li class="header-menu-item">
+                        <a class="header-menu-link" href="home.html">Главная</a>
+                    </li>
+                    <li class="header-menu-item">
+                        <a class="header-menu-link" href="history.html">История</a>
+                    </li>
+                    <li class="header-menu-item">
+                        <a class="header-menu-link" href="home.html#my-section">Выставки</a>
+                    </li>
+                    <li class="header-menu-item">
+                        <a class="header-menu-link" href="collection.html">Коллекция</a>
+                    </li>
+                    <li class="header-menu-item">
+                        <a class="header-menu-link" href="tickets.html">Билеты</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main
+        style="background: url('pictures/tickets_background.jpg') fixed center; background-size: cover; width: 101vw;">
+        <div class="popup" id="popup">
+            <div class="popup-message">
+                <div class="thank" style="display: block; margin-bottom: 10px; text-align: center;">
+                    Заявка оставлена.
+                </div>
+            </div>
+        </div>
+
+        <section class="start-form" style="visibility: hidden;">Start form</section>
+        <div class="login-box">
+            <h2>Оформите заявку на приоберетение билета:</h2>
+            <form id="myForm">
+                <div class="user-box">
+                    <input type="text" required
+                        oninvalid="this.setCustomValidity('Эта информация обязательна для ввода')"
+                        oninput="this.setCustomValidity('')">
+                    <label>Имя</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" required
+                        oninvalid="this.setCustomValidity('Эта информация обязательна для ввода')"
+                        oninput="this.setCustomValidity('')">
+                    <label>Фамилия</label>
+                </div>
+                <div class="user-box"><input type="tel" placeholder="+375XXXXXXXXX" required pattern="\+375[0-9]{9}"
+                        oninvalid="this.setCustomValidity('Введите корректный номер телефона: +375XXXXXXXXX')"
+                        oninput="this.setCustomValidity('')">
+                    <label>Телефон</label>
+
+                </div>
+                <div class="user-box">
+                    <input type="email" required
+                        oninvalid="this.setCustomValidity('Эта информация обязательна для ввода')"
+                        oninput="this.setCustomValidity('')">
+                    <label>Почта</label>
+                </div>
+                <a href="#" id="submit-button">
+                    Отправить
+                </a>
+                <button style="display: none;" type="submit" id="submit-form"></button>
+            </form>
+        </div>
+        <footer class="footer">
+            <div class="footer-body">
+
+                <div class="footer-column">
+                    <p class="footer-column-title">Контакты</p>
+                    <p class="footer-about">
+                    <p class="contacts">+375 (33) 3071038</p>
+                    <p class="contacts">+375 (33) 3071038</p>
+                    <p class="contacts">г. Минск, ул. Вдохновения, 16</p>
+                    </p>
+                </div>
+                <div class="footer-column">
+                    <p class="footer-column-title">Режим работы</p>
+                    <p class="footer-about"> Eжедневно с 10:00 до 18:00</p>
+                </div>
+                <div class="footer-column">
+                    <p class="footer-column-title">Мы в GitHub</p>
+                    <a class="gitHub" href="https://github.com/Camamberr">
+                        <svg width="61" height="62" viewBox="0 0 62 62" fill="none" class="header-git-image">
+                            <image xlink:href="pictures/github1.svg" />
+                        </svg>
+                </div>
+            </div>
+
+        </footer>
+    </main>
+    <script src="js/dynamic.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gallery>
+    <artwork id="pic1">
+        <img src="pictures/present1.png" alt="img 1"/>
+        <description>
+            <artist>Густав Климт</artist>
+            <title>Портрет Сони Книпс</title>
+        </description>
+    </artwork>
+
+    <artwork id="pic4">
+        <img src="pictures/present2.png" alt="img 2"/>
+        <description>
+            <artist>Жан Оноре Фрагонар</artist>
+            <title>Молодая читательница</title>
+        </description>
+    </artwork>
+
+    <artwork id="pic5">
+        <img src="pictures/present3.png" alt="img 3"/>
+        <description>
+            <artist>Фернан Кнопф</artist>
+            <title>Портрет Жанны Кефер</title>
+        </description>
+    </artwork>
+
+    <artwork id="pic2">
+        <img src="pictures/present4.png" alt="img 4"/>
+        <description>
+            <artist>Клод Моне</artist>
+            <title>Кувшинка</title>
+        </description>
+    </artwork>
+
+    <artwork id="pic3">
+        <img src="pictures/present5.png" alt="img 5"/>
+        <description>
+            <artist>Эдгар Дега</artist>
+            <title>Танцовщицы в розовом</title>
+        </description>
+    </artwork>
+
+    <artwork id="pic6">
+        <img src="pictures/present6.png" alt="img 6"/>
+        <description>
+            <artist>Клод Моне</artist>
+            <title>Розовая лодка</title>
+        </description>
+    </artwork>
+
+    <artwork id="pic7">
+        <img src="pictures/present7.png" alt="img 7"/>
+        <description>
+            <artist>Клод Моне</artist>
+            <title>Водяные лилии</title>
+        </description>
+    </artwork>
+
+    <artwork id="pic8">
+        <img src="pictures/present8.png" alt="img 8"/>
+        <description>
+            <artist>Джон Сингер Сарджент</artist>
+            <title>Сестры</title>
+        </description>
+    </artwork>
+
+    <artwork id="pic9">
+        <img src="pictures/present9.png" alt="img 9"/>
+        <description>
+            <artist>Россо Фьорентино</artist>
+            <title>Музицирующий ангел</title>
+        </description>
+    </artwork>
+
+    <artwork id="pic10">
+        <img src="pictures/present10.png" alt="img 10"/>
+        <description>
+            <artist>Алексей фон Явленский</artist>
+            <title>Портрет Сахарова</title>
+        </description>
+    </artwork>
+</gallery>
